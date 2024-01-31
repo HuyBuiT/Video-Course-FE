@@ -20,11 +20,13 @@ const Lessons =({params}: {params:{part:string}}) => {
     const partId = params.part;
     const [items, setItems] = React.useState<ISidebarItem[]>([]);
 
+    const token = localStorage.getItem("token");
     const getLessons = async () => {
         try {
             const config_header = {
                 Accept: "application/json, text/plain, */*",
                 "Content-Type": "application/x-www-form-urlencoded",
+                Authorization: `Bearer ${token}`,
             };
     
             const config = {

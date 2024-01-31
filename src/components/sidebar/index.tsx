@@ -1,8 +1,7 @@
 "use client"
-import React, { useEffect } from "react";
-import { LucideIcon, Home, FileVideo, Video  } from "lucide-react"
+import React, { useEffect, useState } from "react";
+import { LucideIcon, Home, FileVideo, Video, User  } from "lucide-react"
 import SidebarItem from "./item";
-import axiosInstance from "@/src/axios/instance";
 import axios from "axios";
 
 interface ISidebarItem {
@@ -19,11 +18,17 @@ interface ICourse {
 
 
 const Sidebar = () =>{
+    
     const [items, setItems] = React.useState<ISidebarItem[]>([
         {
             name: "Home",
             icon: Home,
             path: "/",
+        },
+        {
+            name: "Profile",
+            icon: User,
+            path: "/profile",
         },
         {
             name: "Video",
@@ -34,13 +39,14 @@ const Sidebar = () =>{
         },
     ]);
     
-
+    const token = localStorage.getItem('token');
 
     const getCourse = async () => {
         try {
             const config_header = {
                 Accept: "application/json, text/plain, */*",
                 "Content-Type": "application/x-www-form-urlencoded",
+                Authorization: `Bearer ${token}`,
             };
     
             const config = {
@@ -86,7 +92,7 @@ const Sidebar = () =>{
             </div>
 
         </div>
-    )
+    );
 }
 
 export default Sidebar;

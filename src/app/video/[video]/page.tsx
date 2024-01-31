@@ -28,12 +28,16 @@ const Parts = ({params}: {params:{video:string}}) =>{
             items: []
         },
     ]);
+
+    const token = localStorage.getItem('token');
+
     const getParts = async () => {
         try {
             const _id = course._id;
             const config_header = {
                 Accept: "application/json, text/plain, */*",
                 "Content-Type": "application/x-www-form-urlencoded",
+                Authorization: `Bearer ${token}`,
             };
     
             const config = {
