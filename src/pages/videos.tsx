@@ -20,7 +20,7 @@ const ListVideo = () => {
             const config = {
                 method: "get",
                 maxBodyLength: Infinity,
-                url: "http://localhost:5500/api/courses",
+                url: process.env.REACT_APP_API_URL+"/courses",
                 headers: config_header,
             };
     

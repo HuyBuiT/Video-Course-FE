@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 const LessonVideo =() => {
     const url = window.location.href.split('/');
     const lessonId = url[url.length -1];
@@ -10,7 +9,7 @@ const LessonVideo =() => {
                 
                 <video id="videoPlayer" controls>
 
-                    <source src={`http://localhost:5500/api/play_video?id=${lessonId}`} type="video/mp4"/>
+                    <source src={`${process.env.REACT_APP_API_URL}/play_video?id=${lessonId}`} type="video/mp4"/>
                     
                 </video>
 

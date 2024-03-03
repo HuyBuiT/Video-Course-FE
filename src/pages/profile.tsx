@@ -30,7 +30,7 @@ const ProfilePage: React.FC = () => {
       const config = {
         method: "get",
         maxBodyLength: Infinity,
-        url: "http://localhost:5500/api/current_user",
+        url: process.env.REACT_APP_API_URL+"/current_user",
         headers: config_header,
       };
 

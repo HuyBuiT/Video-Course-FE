@@ -18,7 +18,7 @@ export default function SignupPage() {
     event.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5500/api/signup", user);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, user);
       console.log("Signup success", response.data);
       toast.success("Signup success");
       // navigate to login page, here you will have to manage the redirection to /login

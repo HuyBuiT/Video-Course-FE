@@ -28,7 +28,7 @@ const Lessons = () => {
             const config = {
                 method: "get",
                 maxBodyLength: Infinity,
-                url: "http://localhost:5500/api/lessons/"+_id,
+                url: process.env.REACT_APP_API_URL+"/lessons/"+_id,
                 headers: config_header,
             };
     

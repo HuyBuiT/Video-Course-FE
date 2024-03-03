@@ -19,7 +19,7 @@ export default function LoginPage() {
     event.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5500/api/login", user);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, user);
       console.log("Login success", response.data);
       localStorage.setItem("token", response.data.jwt);
       localStorage.setItem("role", response.data.role);

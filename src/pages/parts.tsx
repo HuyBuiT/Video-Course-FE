@@ -28,7 +28,7 @@ const Parts = () => {
             const config = {
                 method: "get",
                 maxBodyLength: Infinity,
-                url: "http://localhost:5500/api/parts/"+_id,
+                url: process.env.REACT_APP_API_URL+"/parts/"+_id,
                 headers: config_header,
             };
     
