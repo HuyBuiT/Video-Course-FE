@@ -1,0 +1,35 @@
+/* SubmenuItem.css */
+.submenu-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10%;
+    font-size: 16px;
+    padding: 2%;
+    
+}
+
+.submenu-item:hover {
+  color: purple;
+}
+
+.submenu-item:hover .chevron {
+  transform: rotate(180deg);
+  transition-duration: 150ms;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-top: 8px; /* Adjust as needed */
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.chevron {
+  /* Add styles for Chevron icon if needed */
+}
+  

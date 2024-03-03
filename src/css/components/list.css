@@ -1,0 +1,21 @@
+.item-list {
+    list-style-type: none; /* Remove default list bullets */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the right */
+}
+
+.item-list li {
+    padding: 10px 0; /* Add padding to each list item */
+    margin-left: 2%;
+}
+
+.item-list a {
+    text-decoration: none; /* Remove default link underline */
+    color: #333; /* Set link color */
+}
+  
+  /* Add more styles as needed */
+  
